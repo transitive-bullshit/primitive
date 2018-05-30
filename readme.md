@@ -9,13 +9,7 @@
 ## Usage
 
 ```js
-const extractFrames = require('primitive')
-
-const results = await extractFrames({
-  input: './media/bubbles.gif',
-  output: 'frame-%d.png'
-})
-console.log('number of frames', results.shape[0])
+// TODO
 ```
 
 
