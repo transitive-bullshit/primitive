@@ -1,0 +1,33 @@
+{
+  "name": "primitive",
+  "version": "0.0.0",
+  "description": "TODO",
+  "main": "index.js",
+  "repository": "transitive-bullshit/primitive",
+  "author": "Travis Fischer <travis@automagical.ai>",
+  "license": "MIT",
+  "scripts": {
+    "test": "ava -v && standard"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "TODO"
+  ],
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "standard": "^11.0.0"
+  },
+  "dependencies": {
+    "get-pixels": "^3.3.0",
+    "ow": "^0.3.0",
+    "pify": "^3.0.0",
+    "random-float": "^1.0.0",
+    "random-int": "^1.0.0",
+    "random-normal": "^1.0.0"
+  },
+  "optionalDependencies": {
+    "canvas-prebuilt": "^1.6.5-prerelease.1"
+  }
+}
