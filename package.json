@@ -17,7 +17,9 @@
   ],
   "devDependencies": {
     "ava": "^0.25.0",
-    "standard": "^11.0.0"
+    "rmfr": "^2.0.0",
+    "standard": "^11.0.0",
+    "tempy": "^0.2.1"
   },
   "dependencies": {
     "get-pixels": "^3.3.0",
