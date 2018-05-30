@@ -27,7 +27,5 @@
     "random-int": "^1.0.0",
     "random-normal": "^1.0.0"
   },
-  "optionalDependencies": {
-    "canvas-prebuilt": "^1.6.5-prerelease.1"
-  }
+  "optionalDependencies": {}
 }
