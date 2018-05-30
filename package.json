@@ -22,6 +22,7 @@
     "tempy": "^0.2.1"
   },
   "dependencies": {
+    "chromatism": "^3.0.0",
     "get-pixels": "^3.3.0",
     "ndarray": "^1.0.18",
     "ow": "^0.4.0",
