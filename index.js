@@ -1,13 +1,11 @@
 'use strict'
 
+const context = require('./lib/context')
+const primitive = require('./lib/primitive')
+
 module.exports = async (opts) => {
-
-  // goals:
-  //  - work in browser and node
-  //  - abstract backing store for canvas or opengl
-
-  // how to efficiently calculate mean color over an area?
-  // how to efficiently calculate RMSE over an area?
-
-  return results
+  return primitive({
+    context,
+    ...opts
+  })
 }

@@ -21,11 +21,14 @@
   },
   "dependencies": {
     "get-pixels": "^3.3.0",
-    "ow": "^0.3.0",
+    "ndarray": "^1.0.18",
+    "ow": "^0.4.0",
     "pify": "^3.0.0",
+    "pump-promise": "^1.0.0",
     "random-float": "^1.0.0",
     "random-int": "^1.0.0",
-    "random-normal": "^1.0.0"
+    "random-normal": "^1.0.0",
+    "save-pixels": "^2.3.4"
   },
   "optionalDependencies": {}
 }
