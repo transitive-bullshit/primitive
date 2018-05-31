@@ -1,7 +1,7 @@
 {
   "name": "primitive",
   "version": "0.0.0",
-  "description": "JavaScript library to reproduce images from geometric primitives",
+  "description": "Reproduce images from geometric primitives",
   "main": "index.js",
   "repository": "transitive-bullshit/primitive",
   "author": "Travis Fischer <travis@automagical.ai>",

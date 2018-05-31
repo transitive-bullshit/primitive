@@ -1,8 +1,10 @@
 # primitive
 
-> JavaScript library to reproduce images from geometric primitives (Node.js + browser port of [primitive](https://github.com/fogleman/primitive)).
+> Reproduce images from geometric primitives (Node.js + browser port of [primitive](https://github.com/fogleman/primitive)).
 
 [![NPM](https://img.shields.io/npm/v/primitive.svg)](https://www.npmjs.com/package/primitive) [![Build Status](https://travis-ci.org/transitive-bullshit/primitive.svg?branch=master)](https://travis-ci.org/transitive-bullshit/primitive) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+This library is also available as a [CLI](https://github.com/transitive-bullshit/primitive-cli).
 
 ## Usage
 
