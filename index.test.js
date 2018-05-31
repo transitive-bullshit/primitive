@@ -11,7 +11,7 @@ test(`monalisa.png`, async (t) => {
   await primitive({
     input: path.join(fixtures, 'monalisa.png'),
     output: 'test.png', // TODO
-    shapeType: 'triangle'
+    shapeType: 'rotated-ellipse'
   })
 
   t.pass()
