@@ -30,7 +30,8 @@
     "pump-promise": "^1.0.0",
     "random-int": "^1.0.0",
     "random-normal": "^1.0.0",
-    "save-pixels": "^2.3.4"
+    "save-pixels": "^2.3.4",
+    "time-diff": "^0.3.1"
   },
   "optionalDependencies": {}
 }
