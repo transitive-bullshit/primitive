@@ -25,6 +25,7 @@ TODO
 
 There are several other ports of the primitive algorithm, including at least two JavaScript ports that I'm aware of. This module isn't necessarily better; I created it out of pure fascination.
 
+- [primitive-cli](https://github.com/transitive-bullshit/primitive-cli) - CLI for this module.
 - [primitive](https://github.com/fogleman/primitive) - Original Go version by [Michael Fogleman](https://www.michaelfogleman.com/)
 - [primitive.js](https://github.com/ondras/primitive.js) - JavaScript (browser) port by [Ondřej Žára](https://github.com/ondras)
 - [geometrize](http://www.geometrize.co.uk/) - Haxe and C++ ports by [Sam Twidale](https://samcodes.co.uk/)
