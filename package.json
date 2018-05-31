@@ -31,12 +31,11 @@
   ],
   "devDependencies": {
     "ava": "^0.25.0",
-    "rmfr": "^2.0.0",
-    "standard": "^11.0.0",
-    "tempy": "^0.2.1"
+    "standard": "^11.0.0"
   },
   "dependencies": {
     "chromatism": "^3.0.0",
+    "execa": "^0.10.0",
     "get-pixels": "^3.3.0",
     "ndarray": "^1.0.18",
     "ow": "^0.4.0",
@@ -44,7 +43,9 @@
     "pump-promise": "^1.0.0",
     "random-int": "^1.0.0",
     "random-normal": "^1.0.0",
+    "rmfr": "^2.0.0",
     "save-pixels": "^2.3.4",
+    "tempy": "^0.2.1",
     "time-diff": "^0.3.1"
   }
 }
