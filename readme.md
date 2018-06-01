@@ -8,6 +8,15 @@ This library is also available as a [CLI](https://github.com/transitive-bullshit
 
 [![Demo](https://storage.googleapis.com/transitive-bullshit-primitive/artem-bali-578205-unsplash-triangle-500.png)](https://transitive-bullshit.github.io/primitive-web/)
 
+- [Usage](#usage)
+- [Node API](#node-api)
+  * [primitive](#primitive)
+- [Browser API](#browser-api)
+  * [primitive](#primitive-1)
+- [Related](#related)
+- [Examples](#examples)
+- [License](#license)
+
 ## Usage
 
 Primitive is usable from both Node.js and browser environments. Most of the API options between the two are the same, with minor differences in input and output configurations.
