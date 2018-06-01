@@ -65,7 +65,7 @@ module.exports = async (opts) => {
     context,
     target,
     onStep: async (model, step) => {
-      if (onStep) await opts.step(model, step)
+      if (onStep) await onStep(model, step)
 
       if (ctx) {
         const { width, height } = model.current

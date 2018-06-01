@@ -1,7 +1,7 @@
 {
   "name": "primitive",
   "version": "0.0.0",
-  "description": "Reproduce images from geometric primitives",
+  "description": "Reproduce images from geometric primitives.",
   "main": "index.js",
   "browser": "dist/index.js",
   "repository": "transitive-bullshit/primitive",

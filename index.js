@@ -83,7 +83,7 @@ module.exports = async (opts) => {
     context,
     target,
     onStep: async (model, step) => {
-      if (onStep) await opts.step(model, step)
+      if (onStep) await onStep(model, step)
 
       if (isGIF) {
         const frame = tempOutput.replace('%d', step - 1)
