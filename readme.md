@@ -8,6 +8,8 @@ This library is also available as a [CLI](https://github.com/transitive-bullshit
 
 [![Demo](https://storage.googleapis.com/transitive-bullshit-primitive/artem-bali-578205-unsplash-triangle-500.png)](https://transitive-bullshit.github.io/primitive-web/)
 
+#### Table of Contents
+
 - [Usage](#usage)
 - [Node API](#node-api)
   * [primitive](#primitive)
