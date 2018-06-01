@@ -92,8 +92,7 @@ module.exports = async (opts) => {
   if (output) {
     if (isGIF) {
       await context.saveGIF(frames, output, opts)
-      console.log(tempDir)
-      // await rmfr(tempDir)
+      await rmfr(tempDir)
     } else {
       await context.saveImage(model.current, output, opts)
     }
