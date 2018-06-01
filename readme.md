@@ -95,10 +95,6 @@ There are several other ports of the primitive algorithm, including at least two
 -   [node-primitive](https://github.com/vincentdesmares/node-primitive) - Node.js port by [Vincent Desmares](https://github.com/vincentdesmares).
 -   [sqip](https://github.com/technopagan/sqip) - An SVG-based LQIP library built on top of the [original primitive](https://github.com/fogleman/primitive).
 
-## License
-
-MIT © [Travis Fischer](https://github.com/transitive-bullshit)
-
 ## Examples
 
 ![alekzan-powell](https://storage.googleapis.com/transitive-bullshit-primitive/alekzan-powell-408990-unsplash-triangle-500.png "500 triangles")
@@ -118,5 +114,9 @@ MIT © [Travis Fischer](https://github.com/transitive-bullshit)
 ![timothy-paul-smith](https://storage.googleapis.com/transitive-bullshit-primitive/timothy-paul-smith-405497-unsplash-rotated-rectangle-500.png "500 rectangles")
 
 ![umanoide](https://storage.googleapis.com/transitive-bullshit-primitive/umanoide-112489-unsplash-rotated-ellipse-500.png "500 ellipses")
+
+## License
+
+MIT © [Travis Fischer](https://github.com/transitive-bullshit)
 
 All images are provided by [Unsplash](https://unsplash.com/) via a [CC0](https://creativecommons.org/publicdomain/zero/1.0/) license.
