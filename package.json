@@ -7,6 +7,7 @@
   "author": "Travis Fischer <travis@automagical.ai>",
   "license": "MIT",
   "scripts": {
+    "docs": "update-markdown-jsdoc --shallow -f index.js -s 'Node API'",
     "test": "ava -v && standard"
   },
   "engines": {
@@ -31,7 +32,8 @@
   ],
   "devDependencies": {
     "ava": "^0.25.0",
-    "standard": "^11.0.0"
+    "standard": "^11.0.0",
+    "update-markdown-jsdoc": "^1.0.4"
   },
   "dependencies": {
     "chromatism": "^3.0.0",
