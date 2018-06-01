@@ -10,7 +10,7 @@ This library is also available as a [CLI](https://github.com/transitive-bullshit
 
 #### Table of Contents
 
-- [Usage](#usage)
+- [Install](#install)
 - [Usage](#usage)
 - [Node API](#node-api)
   * [primitive](#primitive)
