@@ -12,6 +12,7 @@ This library is also available as a [CLI](https://github.com/transitive-bullshit
 
 - [Install](#install)
 - [Usage](#usage)
+- [How It Works](#how-it-works)
 - [Node API](#node-api)
   * [primitive](#primitive)
 - [Browser API](#browser-api)
