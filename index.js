@@ -50,7 +50,7 @@ module.exports = async (opts) => {
     input,
     output,
     onStep,
-    nthFrame = 1,
+    nthFrame = 0,
     ...rest
   } = opts
 
@@ -84,6 +84,11 @@ module.exports = async (opts) => {
           const frame = tempOutput.replace('%d', frames.length)
           await context.saveImage(model.current, frame)
           frames.push(frame)
+        }
+      } else if (output) {
+        if (nthFrame > 0 && (step - 1) % nthFrame === 0) {
+          const frame = output.replace('.', `-${step - 1}.`)
+          await context.saveImage(model.current, frame, opts)
         }
       }
     }
