@@ -12,14 +12,6 @@ const primitive = require('./lib/primitive')
  *
  * Returns a Promise for the generated model.
  *
- * Available shape types:
- * - triangle
- * - ellipse
- * - rotated-ellipse
- * - rectangle
- * - rotated-rectangle
- * - random (will use all the shape types)
- *
  * @name primitive
  * @function
  *
