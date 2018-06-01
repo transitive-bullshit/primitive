@@ -50,11 +50,13 @@ module.exports = async (opts) => {
     input,
     output,
     onStep,
+    nthFrame = 1,
     ...rest
   } = opts
 
   ow(opts, ow.object.label('opts'))
   ow(input, ow.string.nonEmpty.label('input'))
+  ow(nthFrame, ow.number.integer)
   if (output) ow(output, ow.string.nonEmpty.label('output'))
 
   const ext = output && path.extname(output).slice(1).toLowerCase()
@@ -78,9 +80,11 @@ module.exports = async (opts) => {
       if (onStep) await onStep(model, step)
 
       if (isGIF) {
-        const frame = tempOutput.replace('%d', step - 1)
-        await context.saveImage(model.current, frame)
-        frames.push(frame)
+        if (nthFrame <= 0 || (step - 1) % nthFrame === 0) {
+          const frame = tempOutput.replace('%d', frames.length)
+          await context.saveImage(model.current, frame)
+          frames.push(frame)
+        }
       }
     }
   })
@@ -88,7 +92,8 @@ module.exports = async (opts) => {
   if (output) {
     if (isGIF) {
       await context.saveGIF(frames, output, opts)
-      await rmfr(tempDir)
+      console.log(tempDir)
+      // await rmfr(tempDir)
     } else {
       await context.saveImage(model.current, output, opts)
     }

@@ -6,10 +6,13 @@
 
 This library is also available as a [CLI](https://github.com/transitive-bullshit/primitive-cli).
 
-[![Demo](https://storage.googleapis.com/transitive-bullshit-primitive/artem-bali-578205-unsplash-triangle-500.png)](https://transitive-bullshit.github.io/primitive-web/)
+[![Demo](https://storage.googleapis.com/transitive-bullshit-primitive/artem-bali-578205-unsplash-triangle-500.gif)](https://transitive-bullshit.github.io/primitive-web/)
+
+<!-- https://storage.googleapis.com/transitive-bullshit-primitive/artem-bali-578205-unsplash-triangle-500.png -->
 
 #### Table of Contents
 
+- [Usage](#usage)
 - [Usage](#usage)
 - [Node API](#node-api)
   * [primitive](#primitive)
@@ -18,6 +21,12 @@ This library is also available as a [CLI](https://github.com/transitive-bullshit
 - [Related](#related)
 - [Examples](#examples)
 - [License](#license)
+
+## Install
+
+```bash
+npm install --save primitive
+```
 
 ## Usage
 
