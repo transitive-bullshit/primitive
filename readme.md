@@ -1,10 +1,12 @@
-# primitive
+# primitive ([demo](https://transitive-bullshit.github.io/primitive-web/))
 
 > Reproduce images from geometric primitives (Node.js + browser port of [primitive](https://github.com/fogleman/primitive)).
 
 [![NPM](https://img.shields.io/npm/v/primitive.svg)](https://www.npmjs.com/package/primitive) [![Build Status](https://travis-ci.com/transitive-bullshit/primitive.svg?branch=master)](https://travis-ci.com/transitive-bullshit/primitive) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 This library is also available as a [CLI](https://github.com/transitive-bullshit/primitive-cli).
+
+[![Demo](https://storage.googleapis.com/transitive-bullshit-primitive/artem-bali-578205-unsplash-triangle-500.png)](https://transitive-bullshit.github.io/primitive-web/)
 
 ## Node API
 
@@ -99,3 +101,25 @@ There are several other ports of the primitive algorithm, including at least two
 ## License
 
 MIT © [Travis Fischer](https://github.com/transitive-bullshit)
+
+All images courtesy of [Unsplash](https://unsplash.com/) via [CC0](https://creativecommons.org/publicdomain/zero/1.0/) license.
+
+## Examples
+
+![alekzan-powell](https://storage.googleapis.com/transitive-bullshit-primitive/alekzan-powell-408990-unsplash-triangle-500.png "500 triangles")
+
+![atikh-bana](https://storage.googleapis.com/transitive-bullshit-primitive/atikh-bana-125761-unsplash-rotated-ellipse-500.png "500 rotated ellipses")
+
+![caleb-woods](https://storage.googleapis.com/transitive-bullshit-primitive/caleb-woods-248879-unsplash-triangle-500.png "500 triangles")
+
+![glauco-zuccaccia](https://storage.googleapis.com/transitive-bullshit-primitive/glauco-zuccaccia-132831-unsplash-rotated-ellipse-500.png "500 rotated ellipses")
+
+![jessica-weiller](https://storage.googleapis.com/transitive-bullshit-primitive/jessica-weiller-60884-unsplash-triangle-500.png "500 triangles")
+
+![nicolas-picard](https://storage.googleapis.com/transitive-bullshit-primitive/nicolas-picard-450042-unsplash-random-500.png "500 random shapes")
+
+![stefanus-martanto](https://storage.googleapis.com/transitive-bullshit-primitive/stefanus-martanto-setyo-husodo-14699-unsplash-random-500.png "500 random shapes")
+
+![timothy-paul-smith](https://storage.googleapis.com/transitive-bullshit-primitive/timothy-paul-smith-405497-unsplash-rotated-rectangle-500.png "500 rectangles")
+
+![umanoide](https://storage.googleapis.com/transitive-bullshit-primitive/umanoide-112489-unsplash-rotated-ellipse-500.png "500 ellipses")
