@@ -36,6 +36,7 @@
     "update-markdown-jsdoc": "^1.0.6"
   },
   "dependencies": {
+    "@sindresorhus/is": "^0.9.0",
     "chromatism": "^3.0.0",
     "execa": "^0.10.0",
     "get-pixels": "^3.3.0",

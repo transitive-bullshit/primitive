@@ -1,25 +1,17 @@
 'use strict'
 
 const ow = require('ow')
-const path = require('path')
-const rmfr = require('rmfr')
-const tempy = require('tempy')
 
-const context = require('./lib/context')
+const context = require('./lib/browser-context')
 const primitive = require('./lib/primitive')
-
-const supportedOutputFormats = new Set([
-  'png',
-  'jpg',
-  'svg',
-  'gif'
-])
 
 /**
  * @name primitive
  * @function
  *
  * Reproduces the given input image using geometric primitives.
+ *
+ * Optionally draws the results to an HTML canvas.
  *
  * Returns a Promise for the generated model.
  *
@@ -31,15 +23,9 @@ const supportedOutputFormats = new Set([
  * - rotated-rectangle
  * - random (will use all the shape types)
  *
- * Available output formats:
- * - png
- * - jpg
- * - svg
- * - gif
- *
  * @param {Object} opts - Configuration options
- * @param {string} opts.input - Input image to process (can be a local path, http url, or data url)
- * @param {string} [opts.output] - Path to generate output image
+ * @param {string|Image|ImageData} opts.input - URL, Image, or ImageData of input image to process
+ * @param {string|HTMLCanvasElement} [opts.output] - Selector or DOM Element of HTMLCanvas to draw results
  * @param {number} [opts.numSteps=200] - Number of steps to process [1, 1000]
  * @param {number} [opts.minEnergy] - Minimum energy to stop processing early [0, 1]
  * @param {number} [opts.shapeAlpha=128] - Alpha opacity of shapes [0, 255]
@@ -61,21 +47,17 @@ module.exports = async (opts) => {
   } = opts
 
   ow(opts, ow.object.label('opts'))
-  ow(input, ow.string.nonEmpty.label('input'))
-  if (output) ow(output, ow.string.nonEmpty.label('output'))
-
-  const ext = output && path.extname(output).slice(1).toLowerCase()
-  const isGIF = (ext === 'gif')
-
-  if (output && !supportedOutputFormats.has(ext)) {
-    throw new Error(`unsupported output format "${ext}"`)
-  }
+  ow(input, ow.any(
+    ow.string.nonEmpty,
+    ow.object.instanceOf(global.ImageData),
+    ow.object.instanceOf(global.Image)
+  ).label('input'))
 
   const target = await context.loadImage(input)
-
-  const tempDir = isGIF && tempy.directory()
-  const tempOutput = isGIF && path.join(tempDir, 'frame-%d.png')
-  const frames = []
+  const { canvas } = context.loadCanvas(output, 'output')
+  const ctx = output.getContext('2d')
+  const scratch = canvas && document.createElement('canvas')
+  if (ctx) context.enableContextAntialiasing(ctx)
 
   const model = await primitive({
     ...rest,
@@ -84,22 +66,25 @@ module.exports = async (opts) => {
     onStep: async (model, step) => {
       if (opts.step) await opts.step(model, step)
 
-      if (isGIF) {
-        const frame = tempOutput.replace('%d', step - 1)
-        await context.saveImage(model.current, frame)
-        frames.push(frame)
+      if (ctx) {
+        const { width, height } = model.current
+
+        if (canvas.width === width && canvas.height === height) {
+          // output canvas is the same size as current working buffer,
+          // so just copy data over (efficient)
+          ctx.putImageData(model.current)
+        } else {
+          // output canvas is different size than current working buffer,
+          // so resize into temp canvas before drawing (less efficient)
+          scratch.width = width
+          scratch.height = height
+          const ctx2 = scratch.getContext('2d')
+          ctx2.putImageData(model.current)
+          ctx.drawImage(scratch, 0, 0, canvas.width, canvas.height)
+        }
       }
     }
   })
-
-  if (output) {
-    if (isGIF) {
-      await context.saveGIF(frames, output, opts)
-      await rmfr(tempDir)
-    } else {
-      await context.saveImage(model.current, output, opts)
-    }
-  }
 
   return model
 }
