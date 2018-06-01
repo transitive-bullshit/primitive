@@ -102,8 +102,6 @@ There are several other ports of the primitive algorithm, including at least two
 
 MIT © [Travis Fischer](https://github.com/transitive-bullshit)
 
-All images courtesy of [Unsplash](https://unsplash.com/) via [CC0](https://creativecommons.org/publicdomain/zero/1.0/) license.
-
 ## Examples
 
 ![alekzan-powell](https://storage.googleapis.com/transitive-bullshit-primitive/alekzan-powell-408990-unsplash-triangle-500.png "500 triangles")
@@ -123,3 +121,6 @@ All images courtesy of [Unsplash](https://unsplash.com/) via [CC0](https://creat
 ![timothy-paul-smith](https://storage.googleapis.com/transitive-bullshit-primitive/timothy-paul-smith-405497-unsplash-rotated-rectangle-500.png "500 rectangles")
 
 ![umanoide](https://storage.googleapis.com/transitive-bullshit-primitive/umanoide-112489-unsplash-rotated-ellipse-500.png "500 ellipses")
+
+All images provided by [Unsplash](https://unsplash.com/) via [CC0](https://creativecommons.org/publicdomain/zero/1.0/) license.
+
