@@ -6,9 +6,6 @@ const context = require('./lib/browser-context')
 const primitive = require('./lib/primitive')
 
 /**
- * @name primitive
- * @function
- *
  * Reproduces the given input image using geometric primitives.
  *
  * Optionally draws the results to an HTML canvas.
@@ -22,6 +19,9 @@ const primitive = require('./lib/primitive')
  * - rectangle
  * - rotated-rectangle
  * - random (will use all the shape types)
+ *
+ * @name primitive
+ * @function
  *
  * @param {Object} opts - Configuration options
  * @param {string|Image|ImageData} opts.input - URL, Image, or ImageData of input image to process

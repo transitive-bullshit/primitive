@@ -16,9 +16,6 @@ const supportedOutputFormats = new Set([
 ])
 
 /**
- * @name primitive
- * @function
- *
  * Reproduces the given input image using geometric primitives.
  *
  * Returns a Promise for the generated model.
@@ -36,6 +33,9 @@ const supportedOutputFormats = new Set([
  * - jpg
  * - svg
  * - gif
+ *
+ * @name primitive
+ * @function
  *
  * @param {Object} opts - Configuration options
  * @param {string} opts.input - Input image to process (can be a local path, http url, or data url)
