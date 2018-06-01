@@ -2305,9 +2305,9 @@ doctrine@^2.0.2, doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
-documentation-custom-markdown@^6.3.2:
-  version "6.3.2"
-  resolved "https://registry.yarnpkg.com/documentation-custom-markdown/-/documentation-custom-markdown-6.3.2.tgz#b13f2cc9f66a4b7f7e6b7864f922a7f79e2ede4f"
+documentation-custom-markdown@^6.3.5:
+  version "6.3.5"
+  resolved "https://registry.yarnpkg.com/documentation-custom-markdown/-/documentation-custom-markdown-6.3.5.tgz#ac067c6fcbf77a3e02c5b260d4e921f885e7ab1b"
   dependencies:
     ansi-html "^0.0.7"
     babel-core "^6.26.0"
@@ -7046,12 +7046,12 @@ upath@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.1.0.tgz#35256597e46a581db4793d0ce47fa9aebfc9fabd"
 
-update-markdown-jsdoc@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/update-markdown-jsdoc/-/update-markdown-jsdoc-1.0.4.tgz#627c128ba068bfdfc42226cab0e67c1c5b9ee144"
+update-markdown-jsdoc@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/update-markdown-jsdoc/-/update-markdown-jsdoc-1.0.6.tgz#9c80dd5cab6809d386206aea0c17a67214cbc77e"
   dependencies:
     commander "^2.15.1"
-    documentation-custom-markdown "^6.3.2"
+    documentation-custom-markdown "^6.3.5"
     execa "^0.10.0"
     node-compat-require "^1.0.3"
     read-pkg-up "^3.0.0"

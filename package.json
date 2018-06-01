@@ -33,7 +33,7 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "standard": "^11.0.0",
-    "update-markdown-jsdoc": "^1.0.4"
+    "update-markdown-jsdoc": "^1.0.6"
   },
   "dependencies": {
     "chromatism": "^3.0.0",
