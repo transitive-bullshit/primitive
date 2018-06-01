@@ -8,7 +8,9 @@
   "author": "Travis Fischer <travis@automagical.ai>",
   "license": "MIT",
   "scripts": {
-    "docs": "update-markdown-jsdoc --no-markdown-toc --shallow -f index.js -s 'Node API'",
+    "docs": "yarn run docs-node && yarn run docs-browser",
+    "docs-node": "update-markdown-jsdoc --no-markdown-toc --shallow -f index.js -s 'Node API'",
+    "docs-browser": "update-markdown-jsdoc --no-markdown-toc --shallow -f browser.js -s 'Browser API'",
     "build": "yarn run clean && rollup -c",
     "start": "yarn run clean && rollup -c -w",
 		"clean": "del dist",
