@@ -6,7 +6,7 @@
 
 This library is also available as a [CLI](https://github.com/transitive-bullshit/primitive-cli).
 
-[![Demo](https://storage.googleapis.com/transitive-bullshit-primitive/artem-bali-578205-unsplash-triangle-500.gif)](https://transitive-bullshit.github.io/primitive-web/)
+[![Demo](https://raw.githubusercontent.com/transitive-bullshit/primitive/master/media/artem-bali-578205-unsplash-triangle-500.gif)](https://transitive-bullshit.github.io/primitive-web/)
 
 <!-- https://storage.googleapis.com/transitive-bullshit-primitive/artem-bali-578205-unsplash-triangle-500.png -->
 
