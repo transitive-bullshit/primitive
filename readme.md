@@ -6,9 +6,7 @@
 
 This library is also available as a [CLI](https://github.com/transitive-bullshit/primitive-cli).
 
-[![Demo](https://raw.githubusercontent.com/transitive-bullshit/primitive/master/media/artem-bali-578205-unsplash-triangle-500.gif)](https://transitive-bullshit.github.io/primitive-web/)
-
-<!-- https://storage.googleapis.com/transitive-bullshit-primitive/artem-bali-578205-unsplash-triangle-500.png -->
+[![Demo](https://storage.googleapis.com/transitive-bullshit-primitive/artem-bali-578205-unsplash-triangle-500.png)](https://transitive-bullshit.github.io/primitive-web/)
 
 #### Table of Contents
 
@@ -42,6 +40,14 @@ Available shape types:
 -   rectangle
 -   rotated-rectangle
 -   random (will use all the shape types)
+
+## How It Works
+
+A target image is provided as input. The algorithm tries to find the single most optimal shape that can be drawn to minimize the error between the target image and the drawn image. It repeats this process, adding one shape at a time. Around 50 to 200 shapes are needed to reach a result that is recognizable yet artistic and abstract.
+
+This GIF demonstrates the iterative nature of the algorithm, attempting to minimize the mean squared error by adding one shape at a time (use a ".gif" output file to generate one yourself).
+
+[![Demo](https://raw.githubusercontent.com/transitive-bullshit/primitive/master/media/artem-bali-578205-unsplash-triangle-500.gif)](https://transitive-bullshit.github.io/primitive-web/)
 
 ## Node API
 
