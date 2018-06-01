@@ -51,7 +51,7 @@ const supportedOutputFormats = new Set([
  * @param {function} [opts.onStep] - Optional async function taking in the model and step index
  * @param {function} [opts.log=noop] - Optional logging function (console.log to enable logging)
  *
- * @return {Promise<Object>}
+ * @return {Promise}
  */
 module.exports = async (opts) => {
   const {
