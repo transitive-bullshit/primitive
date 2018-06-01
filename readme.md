@@ -53,7 +53,7 @@ A target image is provided as input. The algorithm tries to find the single most
 
 This GIF demonstrates the iterative nature of the algorithm, attempting to minimize the mean squared error by adding one shape at a time (use a ".gif" output file to generate one yourself).
 
-[![Demo](https://raw.githubusercontent.com/transitive-bullshit/primitive/master/media/artem-bali-578205-unsplash-triangle-500.gif)](https://transitive-bullshit.github.io/primitive-web/)
+[![Demo](https://raw.githubusercontent.com/transitive-bullshit/primitive/master/media/caleb-woods-248879-unsplash-rotated-ellipse-500.gif)](https://transitive-bullshit.github.io/primitive-web/)
 
 ## Node API
 
