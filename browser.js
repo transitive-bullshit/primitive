@@ -48,6 +48,13 @@ export default async (opts) => {
   ))
   ow(numSteps, ow.number.integer.positive.label('numSteps'))
 
+  if (output) {
+    ow(output, ow.any(
+      ow.string.nonEmpty.label(output),
+      ow.object.instanceOf(global.HTMLCanvasElement).label(output)
+    ))
+  }
+
   const target = await context.loadImage(input)
   const canvas = output && await context.loadCanvas(output, 'output')
   const ctx = canvas && canvas.getContext('2d')
@@ -76,7 +83,6 @@ export default async (opts) => {
           const ctx2 = scratch.getContext('2d')
           ctx2.putImageData(model.current, 0, 0)
           ctx.drawImage(scratch, 0, 0, canvas.width, canvas.height)
-          console.log(canvas, canvas.width, canvas.height)
         }
       }
     }
