@@ -67,8 +67,12 @@ export default async (opts) => {
         if (canvas.width === width && canvas.height === height) {
           // output canvas is the same size as current working buffer,
           // so just copy data over (efficient)
-          ctx.putImageData(model.current)
+          ctx.putImageData(model.current, 0, 0)
         } else {
+          canvas.width = width
+          canvas.height = height
+          ctx.putImageData(model.current, 0, 0)
+          /*
           // output canvas is different size than current working buffer,
           // so resize into temp canvas before drawing (less efficient)
           scratch.width = width
@@ -76,6 +80,7 @@ export default async (opts) => {
           const ctx2 = scratch.getContext('2d')
           ctx2.putImageData(model.current, 0, 0)
           ctx.drawImage(scratch, 0, 0, canvas.width, canvas.height)
+          */
         }
       }
     }
@@ -83,9 +88,11 @@ export default async (opts) => {
 
   let current = 0
   const update = () => {
+    console.log('step', current, '; score', model.score)
     step(current)
       .then((candidates) => {
         if (candidates <= 0 || ++current >= numSteps) return
+
         raf(update)
       }, (err) => {
         console.error('primitive error', err)
