@@ -1,3 +1,5 @@
+// node es module entrypoint
+
 import ow from 'ow'
 import path from 'path'
 import rmfr from 'rmfr'
