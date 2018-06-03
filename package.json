@@ -2,8 +2,9 @@
   "name": "primitive",
   "version": "0.0.0",
   "description": "Reproduce images from geometric primitives.",
-  "main": "index.js",
-  "browser": "dist/index.js",
+  "main": "main.js",
+  "module": "module.js",
+  "browser": "dist/browser.js",
   "repository": "transitive-bullshit/primitive",
   "author": "Travis Fischer <travis@automagical.ai>",
   "license": "MIT",
@@ -56,6 +57,7 @@
   },
   "dependencies": {
     "chromatism": "^3.0.0",
+    "esm": "^3.0.45",
     "execa": "^0.10.0",
     "get-pixels": "^3.3.0",
     "ndarray": "^1.0.18",
@@ -67,6 +69,12 @@
     "random-normal": "^1.0.0",
     "rmfr": "^2.0.0",
     "save-pixels": "^2.3.4",
-    "tempy": "^0.2.1"
+    "tempy": "^0.2.1",
+    "time-diff": "^0.3.1"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
   }
 }

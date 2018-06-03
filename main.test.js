@@ -1,9 +1,7 @@
-'use strict'
+import test from 'ava'
+import path from 'path'
 
-const { test } = require('ava')
-const path = require('path')
-
-const primitive = require('.')
+import primitive from './main'
 
 const fixturesPath = path.join(__dirname, 'media')
 

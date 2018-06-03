@@ -102,7 +102,7 @@ export default async (opts) => {
 
     const candidates = await step(s)
 
-    console.log(`${step})`, {
+    console.log(`${s})`, {
       time: time.end(`step ${s}`),
       candidates,
       score: model.score

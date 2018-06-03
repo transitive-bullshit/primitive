@@ -23,8 +23,6 @@ export default {
     resolve({
       browser: true
     }),
-    commonjs({
-      // exclude: 'node_modules//log-utils/**'
-    })
+    commonjs()
   ]
 }
