@@ -3,6 +3,8 @@ import ow from 'ow'
 import context from './lib/browser-context'
 import primitive from './lib/primitive'
 
+import raf from 'raf'
+
 /**
  * Reproduces the given input image using geometric primitives.
  *
@@ -34,6 +36,7 @@ export default async (opts) => {
     input,
     output,
     onStep,
+    numSteps = 200,
     ...rest
   } = opts
 
@@ -43,14 +46,15 @@ export default async (opts) => {
     ow.object.instanceOf(global.ImageData).label('input'),
     ow.object.instanceOf(global.Image).label('input')
   ))
+  ow(numSteps, ow.number.integer.positive.label('numSteps'))
 
   const target = await context.loadImage(input)
-  const { canvas } = context.loadCanvas(output, 'output')
+  const canvas = context.loadCanvas(output, 'output')
   const ctx = output.getContext('2d')
   const scratch = canvas && document.createElement('canvas')
   if (ctx) context.enableContextAntialiasing(ctx)
 
-  const model = await primitive({
+  const { model, step } = await primitive({
     ...rest,
     context,
     target,
@@ -70,12 +74,24 @@ export default async (opts) => {
           scratch.width = width
           scratch.height = height
           const ctx2 = scratch.getContext('2d')
-          ctx2.putImageData(model.current)
+          ctx2.putImageData(model.current, 0, 0)
           ctx.drawImage(scratch, 0, 0, canvas.width, canvas.height)
         }
       }
     }
   })
 
+  let current = 0
+  const update = () => {
+    step(current)
+      .then((candidates) => {
+        if (candidates <= 0 || ++current >= numSteps) return
+        raf(update)
+      }, (err) => {
+        console.error('primitive error', err)
+      })
+  }
+
+  raf(update)
   return model
 }

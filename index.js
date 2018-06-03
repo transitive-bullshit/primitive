@@ -2,6 +2,7 @@ import ow from 'ow'
 import path from 'path'
 import rmfr from 'rmfr'
 import tempy from 'tempy'
+import Time from 'time-diff'
 
 import context from './lib/context'
 import primitive from './lib/primitive'
@@ -48,6 +49,7 @@ export default async (opts) => {
     input,
     output,
     onStep,
+    numSteps = 200,
     nthFrame = 0,
     ...rest
   } = opts
@@ -55,6 +57,7 @@ export default async (opts) => {
   ow(opts, ow.object.label('opts'))
   ow(input, ow.string.nonEmpty.label('input'))
   ow(nthFrame, ow.number.integer)
+  ow(numSteps, ow.number.integer.positive.label('numSteps'))
   if (output) ow(output, ow.string.nonEmpty.label('output'))
 
   const ext = output && path.extname(output).slice(1).toLowerCase()
@@ -70,7 +73,7 @@ export default async (opts) => {
   const tempOutput = isGIF && path.join(tempDir, 'frame-%d.png')
   const frames = []
 
-  const model = await primitive({
+  const { model, step } = await primitive({
     ...rest,
     context,
     target,
@@ -91,6 +94,22 @@ export default async (opts) => {
       }
     }
   })
+
+  const time = new Time()
+
+  for (let s = 1; s <= numSteps; ++s) {
+    time.start(`step ${s}`)
+
+    const candidates = await step(s)
+
+    console.log(`${step})`, {
+      time: time.end(`step ${s}`),
+      candidates,
+      score: model.score
+    })
+
+    if (!candidates) break
+  }
 
   if (output) {
     if (isGIF) {
