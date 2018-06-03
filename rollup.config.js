@@ -1,6 +1,5 @@
 import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
-import external from 'rollup-plugin-peer-deps-external'
 import resolve from 'rollup-plugin-node-resolve'
 
 import pkg from './package.json'
@@ -10,15 +9,22 @@ export default {
   output: [
     {
       file: pkg.browser,
-      format: 'cjs'
+      format: 'cjs',
+      sourceMap: true
     }
   ],
+  external: [ 'ow' ],
   plugins: [
-    external(),
     babel({
-      exclude: 'node_modules/**'
+      exclude: 'node_modules/**',
+      externalHelpers: false,
+      runtimeHelpers: true
     }),
-    resolve(),
-    commonjs()
+    resolve({
+      browser: true
+    }),
+    commonjs({
+      // exclude: 'node_modules//log-utils/**'
+    })
   ]
 }

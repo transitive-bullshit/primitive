@@ -1,9 +1,7 @@
-'use strict'
+import ow from 'ow'
 
-const ow = require('ow')
-
-const context = require('./lib/browser-context')
-const primitive = require('./lib/primitive')
+import context from './lib/browser-context'
+import primitive from './lib/primitive'
 
 /**
  * Reproduces the given input image using geometric primitives.
@@ -31,7 +29,7 @@ const primitive = require('./lib/primitive')
  *
  * @return {Promise}
  */
-module.exports = async (opts) => {
+export default async (opts) => {
   const {
     input,
     output,
@@ -41,10 +39,10 @@ module.exports = async (opts) => {
 
   ow(opts, ow.object.label('opts'))
   ow(input, ow.any(
-    ow.string.nonEmpty,
-    ow.object.instanceOf(global.ImageData),
-    ow.object.instanceOf(global.Image)
-  ).label('input'))
+    ow.string.nonEmpty.label('input'),
+    ow.object.instanceOf(global.ImageData).label('input'),
+    ow.object.instanceOf(global.Image).label('input')
+  ))
 
   const target = await context.loadImage(input)
   const { canvas } = context.loadCanvas(output, 'output')

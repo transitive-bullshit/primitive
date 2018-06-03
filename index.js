@@ -1,12 +1,10 @@
-'use strict'
+import ow from 'ow'
+import path from 'path'
+import rmfr from 'rmfr'
+import tempy from 'tempy'
 
-const ow = require('ow')
-const path = require('path')
-const rmfr = require('rmfr')
-const tempy = require('tempy')
-
-const context = require('./lib/context')
-const primitive = require('./lib/primitive')
+import context from './lib/context'
+import primitive from './lib/primitive'
 
 const supportedOutputFormats = new Set([
   'png',
@@ -45,7 +43,7 @@ const supportedOutputFormats = new Set([
  *
  * @return {Promise}
  */
-module.exports = async (opts) => {
+export default async (opts) => {
   const {
     input,
     output,
