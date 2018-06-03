@@ -1,5 +1,4 @@
 'use strict'
 
-// Set options as a parameter, environment variable, or rc file.
-require = require('esm')(module) // eslint-disable-line
-module.exports = require('./module.js').default
+const _require = require('esm')(module) // eslint-disable-line
+module.exports = _require('./module.js').default
