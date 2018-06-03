@@ -49,8 +49,8 @@ export default async (opts) => {
   ow(numSteps, ow.number.integer.positive.label('numSteps'))
 
   const target = await context.loadImage(input)
-  const canvas = context.loadCanvas(output, 'output')
-  const ctx = output.getContext('2d')
+  const canvas = output && await context.loadCanvas(output, 'output')
+  const ctx = canvas && canvas.getContext('2d')
   const scratch = canvas && document.createElement('canvas')
   if (ctx) context.enableContextAntialiasing(ctx)
 
@@ -69,10 +69,6 @@ export default async (opts) => {
           // so just copy data over (efficient)
           ctx.putImageData(model.current, 0, 0)
         } else {
-          canvas.width = width
-          canvas.height = height
-          ctx.putImageData(model.current, 0, 0)
-          /*
           // output canvas is different size than current working buffer,
           // so resize into temp canvas before drawing (less efficient)
           scratch.width = width
@@ -80,7 +76,7 @@ export default async (opts) => {
           const ctx2 = scratch.getContext('2d')
           ctx2.putImageData(model.current, 0, 0)
           ctx.drawImage(scratch, 0, 0, canvas.width, canvas.height)
-          */
+          console.log(canvas, canvas.width, canvas.height)
         }
       }
     }
