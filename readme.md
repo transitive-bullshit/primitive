@@ -23,12 +23,7 @@ This library is also available as a [CLI](https://github.com/transitive-bullshit
 
 ## Install
 
-**Note**: We are currently trying to get the `primitive` npm package name. For now, you have to link to this repository directly.
-
 ```bash
-npm install --save transitive-bullshit/primitive
-
-# (hopefully soon)
 npm install --save primitive
 ```
 

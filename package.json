@@ -1,6 +1,6 @@
 {
   "name": "primitive",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Reproduce images from geometric primitives.",
   "main": "main.js",
   "module": "module.js",
@@ -64,6 +64,7 @@
     "pify": "^3.0.0",
     "pump-promise": "^1.0.0",
     "raf": "^3.4.0",
+    "random": "^2.0.6",
     "random-int": "^1.0.0",
     "random-normal": "^1.0.0",
     "rmfr": "^2.0.0",

@@ -5714,6 +5714,12 @@ random-normal@^1.0.0:
   dependencies:
     object-assign "^4.0.1"
 
+random@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/random/-/random-2.0.6.tgz#c6f82c23c4c8b28be34160391da620d40b0e9e53"
+  dependencies:
+    ow "^0.4.0"
+
 randomatic@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-3.0.0.tgz#d35490030eb4f7578de292ce6dfb04a91a128923"
@@ -6261,10 +6267,6 @@ rollup-plugin-node-resolve@^3.3.0:
     builtin-modules "^2.0.0"
     is-module "^1.0.0"
     resolve "^1.1.6"
-
-rollup-plugin-peer-deps-external@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-peer-deps-external/-/rollup-plugin-peer-deps-external-2.1.1.tgz#49bba4965bedd0b8e1aa613bec4c4ab718b39360"
 
 rollup-pluginutils@^1.5.0:
   version "1.5.2"
