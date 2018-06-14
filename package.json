@@ -1,6 +1,6 @@
 {
   "name": "primitive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reproduce images from geometric primitives.",
   "main": "main.js",
   "module": "module.js",
