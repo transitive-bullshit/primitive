@@ -5201,6 +5201,10 @@ osenv@0, osenv@^0.1.4, osenv@^0.1.5, osenv@~0.1.4:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
+ow-lite@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ow-lite/-/ow-lite-0.0.2.tgz#df9f500e6740b6590a1e9a965730d49a8eb597d1"
+
 ow@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/ow/-/ow-0.4.0.tgz#119a846d23738ce11677331fef8a3fbe019eb05b"
@@ -5714,11 +5718,13 @@ random-normal@^1.0.0:
   dependencies:
     object-assign "^4.0.1"
 
-random@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/random/-/random-2.0.6.tgz#c6f82c23c4c8b28be34160391da620d40b0e9e53"
+random@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/random/-/random-2.0.12.tgz#8b33686639fd26959b40ff11f9186a43c1272f3c"
   dependencies:
+    babel-runtime "^6.26.0"
     ow "^0.4.0"
+    ow-lite "^0.0.2"
 
 randomatic@^3.0.0:
   version "3.0.0"
