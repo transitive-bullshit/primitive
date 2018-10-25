@@ -1,5 +1,11 @@
 import test from 'ava'
 import path from 'path'
+import fs from 'fs'
+import pify from 'pify'
+import rmfr from 'rmfr'
+import tempy from 'tempy'
+import type from 'file-type'
+import isSvg from 'is-svg'
 
 import primitive from './main'
 
@@ -36,4 +42,43 @@ fixtures.forEach((fixture) => {
       t.true(model.score < 1)
     })
   })
+})
+
+test('save jpg', async (t) => {
+  const temp = tempy.file({ extension: 'jpg' })
+  await primitive({
+    input: path.join(fixturesPath, 'lena.png'),
+    numSteps: 2,
+    output: temp
+  })
+
+  const buffer = await pify(fs.readFile)(temp)
+  t.is(type(buffer).ext, 'jpg')
+  await rmfr(temp)
+})
+
+test('save png', async (t) => {
+  const temp = tempy.file({ extension: 'png' })
+  await primitive({
+    input: path.join(fixturesPath, 'lena.png'),
+    numSteps: 2,
+    output: temp
+  })
+
+  const buffer = await pify(fs.readFile)(temp)
+  t.is(type(buffer).ext, 'png')
+  await rmfr(temp)
+})
+
+test('save svg', async (t) => {
+  const temp = tempy.file({ extension: 'svg' })
+  await primitive({
+    input: path.join(fixturesPath, 'lena.png'),
+    numSteps: 2,
+    output: temp
+  })
+
+  const buffer = await pify(fs.readFile)(temp)
+  t.true(isSvg(buffer))
+  await rmfr(temp)
 })
