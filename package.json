@@ -8,6 +8,7 @@
   "repository": "transitive-bullshit/primitive",
   "author": "Travis Fischer <travis@automagical.ai>",
   "license": "MIT",
+  "reveal": true,
   "scripts": {
     "docs": "yarn run docs-node && yarn run docs-browser",
     "docs-node": "update-markdown-jsdoc --no-markdown-toc --shallow -f index.js -s 'Node API'",

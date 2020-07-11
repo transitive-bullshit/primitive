@@ -147,3 +147,5 @@ There are several other ports of the primitive algorithm, including at least two
 MIT © [Travis Fischer](https://github.com/transitive-bullshit)
 
 All images are provided by [Unsplash](https://unsplash.com/) via a [CC0](https://creativecommons.org/publicdomain/zero/1.0/) license.
+
+Support my OSS work by <a href="https://twitter.com/transitive_bs">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
