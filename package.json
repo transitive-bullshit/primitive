@@ -48,6 +48,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "del-cli": "^1.1.0",
+    "file-type": "^10.1.0",
+    "is-svg": "^3.0.0",
     "rollup": "^0.59.4",
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-commonjs": "^9.1.3",
