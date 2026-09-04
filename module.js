@@ -64,6 +64,7 @@ export default async (opts) => {
 
   const ext = output && path.extname(output).slice(1).toLowerCase()
   const isGIF = (ext === 'gif')
+  const isSVG = (ext === 'svg')
 
   if (output && !supportedOutputFormats.has(ext)) {
     throw new Error(`unsupported output format "${ext}"`)
@@ -117,6 +118,8 @@ export default async (opts) => {
     if (isGIF) {
       await context.saveGIF(frames, output, opts)
       await rmfr(tempDir)
+    } else if (isSVG) {
+      await context.saveSVG(model, output, opts)
     } else {
       await context.saveImage(model.current, output, opts)
     }
